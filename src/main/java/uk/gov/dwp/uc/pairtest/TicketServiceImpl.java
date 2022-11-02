@@ -17,7 +17,7 @@ import java.util.Optional;
 import static uk.gov.dwp.uc.pairtest.exception.InvalidPurchaseException.*;
 
 @Slf4j
-public class TicketServiceImpl extends AbstractTicketService implements TicketService {
+public class TicketServiceImpl extends AbstractTicketService {
     /**
      * Should only have private methods other than the one below.
      */
