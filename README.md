@@ -42,7 +42,8 @@ To Achieve these goals:
 
 2. "TicketType to Price Mapping" and "TicketType to NumOfTicket Mapping" are used to store ticket requests.
 The benefit is that, in case of introducing a new TicketType, there is no need to update business logic.
-For example, if a new TicketType - ELDERLY is introduced, the only thing needed to update is adding the Type - "ELDERLY" to the TicketTypeRequest class and the Price to "TicketType-Price Mapping" in Abstract class.
+
+For example, if a new TicketType - ELDERLY is introduced, the only thing needed to update is adding the Type - "ELDERLY" and Price to the TicketTypeRequest class
 Limitation: if the new TicketType does not occupy a seat, then the logic of Seat Allacation has to be udpated accordingly, because the filter is done on INFANT only.
 
 3. TicketTypeRequest.class is made final because it should be immutable 
@@ -70,7 +71,7 @@ purchaseTickets()
 
         1. Parse TicketTypeRequest to Map for easy handling
         2. Validation
-        3. Call 3rd party service for Seat Reservation Seat
+        3. Call 3rd party service for Seat Reservation
         4. Call 3rd party service for Payment
 
 
