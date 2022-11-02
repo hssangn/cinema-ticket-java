@@ -25,7 +25,7 @@ public class TicketServiceImpl extends AbstractTicketService {
     private final TicketPaymentService ticketPaymentService;
     private final SeatReservationService seatReservationService;
 
-    Map<TicketTypeRequest.Type, Integer> ticketTypeCountMap = new HashMap<>();
+    Map<TicketTypeRequest.Type, Integer> ticketTypeCountMap;
 
     public TicketServiceImpl(TicketPaymentService ticketPaymentService,
                               SeatReservationService seatReservationService) {
@@ -36,6 +36,7 @@ public class TicketServiceImpl extends AbstractTicketService {
 
     @Override
     public void purchaseTickets(Long accountId, TicketTypeRequest... ticketTypeRequests) throws InvalidPurchaseException {
+        ticketTypeCountMap = new HashMap<>();
 
         // Step 1. Parse TicketTypeRequest
         log.info("Parse TicketTypeRequest...");
