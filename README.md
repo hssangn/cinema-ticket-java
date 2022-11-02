@@ -60,7 +60,7 @@ Limitation: if the new TicketType does not occupy a seat, then the logic of Seat
    This situation is handled in purchaseTickets().
 
 2. At most 1 infant can sit on 1 adult's lap.
-   Therefore, number of adult should be larger than or equal to number of infant
+   Therefore, number of adult should be greater than or equal to number of infant
 ## Methods
 
 
